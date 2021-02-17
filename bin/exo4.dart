@@ -202,70 +202,7 @@ List users = [
 ];
 
 void main(List<String> args) {
-  List newUsers = [
-    {
-      'id': 11,
-      'name': 'Koffi Richard',
-      'username': 'Bret',
-      'email': 'Sincere@april.biz',
-      'address': {
-        'street': 'Rue du marché',
-        'suite': 'Apt. 556',
-        'city': 'Abidjan',
-        'zipcode': '92998-3874',
-        'geo': {'lat': '-37.3159', 'lng': '81.1496'}
-      },
-      'phone': '013347895',
-      'website': 'daetyErndae.org',
-      'company': {
-        'name': 'UTB',
-        'catchPhrase': 'Luttons pour notre vie',
-        'bs': 'harness real-time e-markets'
-      }
-    },
-    {
-      'id': 12,
-      'name': 'Mariam Touré',
-      'username': 'Mariee',
-      'email': 'MariamNan@gmail.com',
-      'address': {
-        'street': 'Rue des fonctionnaire',
-        'suite': 'Apt. 556',
-        'city': 'Bouaké',
-        'zipcode': '92998-3874',
-        'geo': {'lat': '-37.3159', 'lng': '81.1496'}
-      },
-      'phone': '074534565',
-      'website': 'daetyErndae.org',
-      'company': {
-        'name': 'AST',
-        'catchPhrase': 'La vie est faite pour les battants',
-        'bs': 'harness real-time e-markets'
-      }
-    },
-    {
-      'id': 13,
-      'name': 'Amoin Zalissa',
-      'username': 'Zali',
-      'email': 'ZalissaLumbutu@hotmail.com',
-      'address': {
-        'street': 'Avenue anyama',
-        'suite': 'Apt. 556',
-        'city': 'Abidjan',
-        'zipcode': '92998-3874',
-        'geo': {'lat': '-37.3159', 'lng': '81.1496'}
-      },
-      'phone': '0543560987',
-      'website': 'daetyErndae.org',
-      'company': {
-        'name': 'TID',
-        'catchPhrase': 'Luttons pour notre vie',
-        'bs': 'harness real-time e-markets'
-      }
-    },
-  ];
-  users.insertAll(0, newUsers);
-
   //print(users);
-print('longueur du tableau: ' + users.length.toString());
+  users.removeRange(1, 5);
+  print('Après suppression la taille du tableau devient ${users.length.toString()}');
 }
