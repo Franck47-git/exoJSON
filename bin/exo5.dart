@@ -201,16 +201,18 @@ List users = [
   }
 ];
 
- getUsersData({id = 9}) {
-  for (var i = 0; i < users.length; i++) {
-    if (users[i]['id'] == id) {
-      print(users[i]);
-     
+void main() {
+  users[5] = {
+    'name': 'Franck Tehoua',
+    'email': 'franckhervetehoua@gmail.com',
+    'address': {
+      'city': 'Abidjan',
+    },
+    'phone': '07 47 55 72 90',
+    'company': {
+      'name': 'MALEX',
     }
-  }
-}
+  };
 
-void main(List<String> args) {
- getUsersData(id: 8);
-  
+  print(users);
 }
