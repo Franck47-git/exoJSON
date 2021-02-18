@@ -201,35 +201,32 @@ List users = [
   }
 ];
 
-String phrase1 = users[2]['name'];
-String phrase2 = users[2]['username'];
-String phrase3 = users[2]['email'];
-String phrase4 = users[2]['address']['street'];
-String phrase5 = users[2]['address']['city'];
-String phrase6 = users[2]['phone'];
-String phrase7 = users[2]['address']['geo']['lng'];
-String phrase_7 = users[2]['address']['geo']['lat'];
-String phrase8 = users[2]['company']['name'];
-String phrase9 = users[2]['company']['catchPhrase'];
-String phrase10 = users[2]['company']['bs'];
-
-int id = users[2]['id'];
 void main(List<String> arguments) {
-// 1 - Je souhaite avoir 10 phrase avec les donnees des users
+  for (var i = 0; i < users.length; i++) {
+    print('=================== DEBUT DE USERS ${i + 1} ==============================');
 
-// exemple :  Je me nomme [Leanne Graham], mon adresse email est le suivant : [Sincere@april.biz],
-//  Je suis de [Kulas Light], le nom de la company ou j'exerce est le suivant [Romaguera-Crona]
-// vous souhaitez avoir des info visiter notre site [hildegard.org]
+    print('elle s\'appelle ${users[i]['name']}');
+    print('----------------------------------------------------------------');
+    print('Vous pouvez aussi l\'appeller ${users[i]['username']}');
+    print('------------------------------------------------------------------');
+    print('Son address mail est : ${users[i]['email']}');
+    print('---------------------------------------------------------------');
+    print('elle habite à la rue ${users[i]['address']['street']}');
+    print('---------------------------------------------------------------');
+    print('Sa ville de résidence est ${users[i]['address']['city']}');
+    print('------------------------------------------------------------------');
+    print('Son numéro de télephone est ${users[i]['phone']}');
+    print('------------------------------------------------------------------');
+    print(
+        'Pour la longitude nous avons Long: ${users[i]['address']['geo']['lng']} et la latitude : ${users[i]['address']['geo']['lat']}');
+    print('---------------------------------------------------------------------');
+    print('Sa compagny de transport est ${users[i]['company']['name']}');
+    print('----------------------------------------------------------------------');
+    print('Pour s\'y rendre il faut prendre le ${users[i]['name']}');
+    print('----------------------------------------------------------------------');
+    print('Un vrai ${users[i]['company']['bs']}');
 
-  print("l'identifiant $id s'appelle $phrase1.");
-  print("Vous pouvez aussi l'appeler $phrase2.");
-  print('Son Email est le suivant : $phrase3.');
-  print('Elle habite à la rue $phrase4.');
-  print('Sa ville de résidence est $phrase5.');
-  print('Et son numéro de télephone est le $phrase6.');
-  print(
-      'Pour sa longitude nous avons longitude: $phrase7 et la latitude $phrase_7.');
-  print('Ma compagny de transport est $phrase8.');
-  print('Pour s\'y rendre il faut prendre le $phrase9.');
-  print('Un vrai $phrase10.');
+    print('======================= FIN DE USERS ${ i + 1 } ================================');
+  }
+  
 }
