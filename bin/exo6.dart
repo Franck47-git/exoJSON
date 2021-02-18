@@ -1,3 +1,5 @@
+import 'exoJSON.dart';
+
 List users = [
   {
     "id": 1,
@@ -201,70 +203,20 @@ List users = [
   }
 ];
 
-void main(List<String> args) {
-  List newUsers = [
-    {
-      'id': 11,
-      'name': 'Koffi Richard',
-      'username': 'Bret',
-      'email': 'Sincere@april.biz',
-      'address': {
-        'street': 'Rue du marché',
-        'suite': 'Apt. 556',
-        'city': 'Abidjan',
-        'zipcode': '92998-3874',
-        'geo': {'lat': '-37.3159', 'lng': '81.1496'}
-      },
-      'phone': '013347895',
-      'website': 'daetyErndae.org',
-      'company': {
-        'name': 'UTB',
-        'catchPhrase': 'Luttons pour notre vie',
-        'bs': 'harness real-time e-markets'
-      }
-    },
-    {
-      'id': 12,
-      'name': 'Mariam Touré',
-      'username': 'Mariee',
-      'email': 'MariamNan@gmail.com',
-      'address': {
-        'street': 'Rue des fonctionnaire',
-        'suite': 'Apt. 556',
-        'city': 'Bouaké',
-        'zipcode': '92998-3874',
-        'geo': {'lat': '-37.3159', 'lng': '81.1496'}
-      },
-      'phone': '074534565',
-      'website': 'daetyErndae.org',
-      'company': {
-        'name': 'AST',
-        'catchPhrase': 'La vie est faite pour les battants',
-        'bs': 'harness real-time e-markets'
-      }
-    },
-    {
-      'id': 13,
-      'name': 'Amoin Zalissa',
-      'username': 'Zali',
-      'email': 'ZalissaLumbutu@hotmail.com',
-      'address': {
-        'street': 'Avenue anyama',
-        'suite': 'Apt. 556',
-        'city': 'Abidjan',
-        'zipcode': '92998-3874',
-        'geo': {'lat': '-37.3159', 'lng': '81.1496'}
-      },
-      'phone': '0543560987',
-      'website': 'daetyErndae.org',
-      'company': {
-        'name': 'TID',
-        'catchPhrase': 'Luttons pour notre vie',
-        'bs': 'harness real-time e-markets'
-      }
-    },
-  ];
-users.insertAll(10, newUsers);
+// showMeUsersLength(){
 
-  print(users);
+// }
+void main(List<String> args) {
+  users[5] = {
+    'name': 'Franck Tehoua',
+    'email': 'franckhervetehoua@gmail.com',
+    'address': {
+      'city': 'Abidjan',
+    },
+    'phone': '07 47 55 72 90',
+    'company': {
+      'name': 'MALEX',
+    }
+  };
+  print(users.length.toString());
 }
